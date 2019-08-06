@@ -1,5 +1,6 @@
 import React from 'react';
 import Filters from './Filters';
+import PreliminarCard from './Preliminar-card';
 import NavBar from './Nav-bar';
 
 class Home extends React.Component{
@@ -11,6 +12,7 @@ class Home extends React.Component{
        
         <NavBar/>
         <Filters/>
+        <PreliminarCard/>
         </div>
 
            
