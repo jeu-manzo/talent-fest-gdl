@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import StarRatingComponent from 'react-star-rating-component';
  
-class Star extends React.Component {
+function StaticScore {
   render() {
 
     return (                
@@ -11,11 +11,11 @@ class Star extends React.Component {
           name="rate2" 
           editing={false}
           starCount={5}
-          value={4.5}
+          value={`${props.score}`}
         />
       </div>
     );
   }
 }
 
-export default Star;
+export default StaticScore;

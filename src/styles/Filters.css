@@ -1,3 +1,15 @@
-ul{
-    text-decoration: none;
+.radio {
+    margin: 0;
+    list-style: none;
+}
+
+.container-filters{
+   padding: 3rem;
+}
+
+.searchBar{
+    padding: 0.2rem;
+    width: 20rem;
+    text-align: center;
+    margin-bottom: 0.4rem;
 }

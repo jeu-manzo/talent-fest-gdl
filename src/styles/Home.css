@@ -1,0 +1,16 @@
+#main{
+    display: flex;
+}
+#main > * {
+    flex:1;
+}
+
+
+
+.preliminar-card{
+    border-left: 1px solid black;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    padding-top: 3rem; 
+}

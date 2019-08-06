@@ -2,27 +2,22 @@ import React from 'react';
 import Filters from './Filters';
 import PreliminarCard from './Preliminar-card';
 import NavBar from './Nav-bar';
+import '../styles/Home.css';
 
 class Home extends React.Component{
 
     render(){
 
         return(
-
-            <div>
-            <NavBar/>
-                <p>Soy el home</p>
-            </div>
-
         <div>   
-       
-        <NavBar/>
-        <Filters/>
-        <PreliminarCard/>
+            <NavBar/>
+            <div id="main">
+                <Filters/>
+                <section className="preliminar-card">
+                    <PreliminarCard />
+                </section>
+            </div>
         </div>
-
-           
-
         )
     }
 }

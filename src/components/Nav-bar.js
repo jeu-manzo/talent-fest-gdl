@@ -1,44 +1,20 @@
 import React from 'react';
 import { Navbar, Nav } from "react-bootstrap";
-
-
-
-class NavBar extends React.Component{
-
-    render(){
-
+import '../styles/Nav-bar.css'
 
 class NavBar extends React.Component{
 
     render(){
-        
         return(               
-            <>
-            <Navbar bg="dark" variant="dark">
-              <Nav className="mr-auto">
-                <Nav.Link href="#home">Iniciar sesión</Nav.Link>
-                <Nav.Link href="#features">Crear cuenta</Nav.Link>
-              </Nav>
-            </Navbar>           
-          </>
-        )
-    }
-}
-
-
-        return(
-            <div>
-              {/* <Nav.Item>
-                <Nav.Link>
-                  <Link to="/">Home</Link>
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link>
-                  <Link to="/login">Login</Link>
-                </Nav.Link>
-              </Nav.Item> */}
-              </div>
+          <Navbar className="nav-bar"  variant="dark">
+          <Nav className="mr-auto">
+          <Nav.Link href="#shareopinion">Escribir reseña</Nav.Link>         
+            <section className="sesionStatus">
+            <Nav.Link className="login" href="#login">Iniciar sesión</Nav.Link>
+            <Nav.Link className="login" href="#signup">Crear cuenta</Nav.Link>    
+            </section>    
+          </Nav>
+        </Navbar>  
         )
     }
 }

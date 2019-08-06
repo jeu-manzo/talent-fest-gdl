@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
-
+import '../styles/preliminar-card.css'
 
 
 class PreliminarCard extends React.Component {
@@ -9,17 +9,24 @@ class PreliminarCard extends React.Component {
 
         return (
             <div>
-                <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src="https://previews.123rf.com/images/tigatelu/tigatelu1509/tigatelu150900582/45092989-ni%C3%B1os-de-la-escuela-felices-en-frente-de-la-escuela.jpg" />
-                    <Card.Body>
-                        <Card.Title><span className=""></span>nombre de escuela</Card.Title>
-                        <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk of
-                            the card's content.
-                        </Card.Text>
-                        <Button variant="primary">Go somewhere</Button>
-                    </Card.Body>
-                </Card>
+                 <Card style={{ width: '30rem' }}>
+          <section className="row">
+            
+  <Card.Body className="col-7">
+    <Card.Title>Card Title</Card.Title>
+    <Card.Text>
+     <span>Nombre</span>
+     <span>Ubicación</span>
+    </Card.Text>
+    <Button variant="primary">Go somewhere</Button>
+  </Card.Body>
+  <section className="col-5">
+  <Card.Img variant="top" src="https://solarsystem.nasa.gov/system/basic_html_elements/11561_Sun.png" />
+  <span>Calificación</span>
+  </section>
+  </section>
+</Card>
+
             </div>
 
         )
