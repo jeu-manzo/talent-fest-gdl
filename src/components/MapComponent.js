@@ -12,6 +12,7 @@ class MapComponent extends React.Component {
         lat: 0,
         lng: 0
       },
+      places: [],
       selectedPlace: {},
       activeMarker: null,
       showInfoWindow: true,
@@ -47,40 +48,48 @@ class MapComponent extends React.Component {
     });
   };
 
-  getMarkers = () => {
-    const markers = this.props.filteredPlaces.map(place => {
-      const markerJSX = (
-        <Marker
-          key={place.id}
-          onClick={this.onMarkerClick}
-          position={place.geometry.location}
-          title={place.name}
-          place={place}
-        />
-      );
-      return markerJSX;
-    });
-    return markers;
-  };
+  buildMarker = place => (
+       <Marker
+         key={place.id}
+         onClick={this.onMarkerClick}
+         position={place.geometry.location}
+         title={place.name}
+         place={place}
+       />
+     );
 
-  fetchPlaces = (mapProps, map) => {
-    console.log('searching')
-    const { google } = mapProps;
-    const service = new google.maps.places.PlacesService(map);
-    const request = {
-      location: this.state.currentLatLng,
-      radius: 1000,
-      type: ["school"],
-      keyword: 'primaria'
+
+
+     getMarkers = () => {
+      this.setState({places: this.props.filteredPlaces});
     };
-    service.nearbySearch(request, (results, status, pagination) => {
-      if (status === google.maps.places.PlacesServiceStatus.OK) {
-        console.log(results)
-        this.props.setLoadedPlaces(results);
-        this.props.setFilteredPlaces();
-      }
-    });
-  };
+
+    fetchPlaces = (mapProps, map) => {
+     console.log("searching")
+     const { google } = mapProps;
+     const service = new google.maps.places.PlacesService(map);
+     const request = {
+       location: this.state.currentLatLng,
+       radius: 1000,
+       type: ["school"],
+       keyword: "primaria"
+     };
+     service.nearbySearch(request, (results, status, pagination) => {
+       if (status === google.maps.places.PlacesServiceStatus.OK) {
+         console.log(results)
+         this.props.setLoadedPlaces(results);
+         this.props.setFilteredPlaces();
+         this.getMarkers();
+       }
+       if (status === "ZERO_RESULTS") {
+         console.log("Zero results");
+         setTimeout(() => {
+           this.fetchPlaces(mapProps, map);
+           this.forceUpdate();
+         }, 4000);
+       }
+     });
+   };
 
   render() {
     const mapStyle = {
@@ -103,7 +112,7 @@ class MapComponent extends React.Component {
             center={this.state.currentLatLng}
             onReady={this.fetchPlaces}
           >
-            {this.getMarkers()}
+            {this.state.places ? this.state.places.map(place => this.buildMarker(place)) : null}
             <InfoWindow
               visible={this.state.showInfoWindow}
               marker={this.state.activeMarker}

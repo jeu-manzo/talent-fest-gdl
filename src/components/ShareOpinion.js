@@ -1,5 +1,6 @@
 import React from 'react';
 import DynamicScore from './DinamicScore'
+import Button from 'react-bootstrap/Button';
 import '../styles/shareOpinion.css'
 
 
@@ -13,7 +14,7 @@ class ShareOpinion extends React.Component {
                 <section>
                     <h4>Reseña de la escuela:</h4>
                     <h2 className="schoolName">Nombre</h2>
-                    
+
                     <p className="address"> Direccion y teléfono</p>
                 </section>
                 <section>
@@ -39,8 +40,8 @@ class ShareOpinion extends React.Component {
                         Tamaño de los grupos
                         <DynamicScore />
                     </section>
-
                 </section>
+                <Button>Enviar</Button>
             </div>
         );
     }

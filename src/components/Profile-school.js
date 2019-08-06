@@ -2,14 +2,11 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import StaticScore from './StaticScore'
 import NavBar from './Nav-bar';
+import Map from "google-maps-react";
 import '../styles/profile-schools.css'
 
 class Profile extends React.Component {
-  constructor(props) {
-    super(props)
-  }
   render() {
-
     return (
       <div className="profile-school">
         <NavBar />
@@ -17,8 +14,6 @@ class Profile extends React.Component {
           <h2>Nombre de la Escuela</h2>
           <p>Direccion y teléfono</p>
         </section>
-
-        <section className="mapa-seccion">Mapa!!</section>
 
         <Card className="profile-section" style={{ width: '100%' }}>
           <section className="row">
@@ -52,7 +47,7 @@ class Profile extends React.Component {
         </Card>
 
         <section className="row" >
-          <section className="col-6">            
+          <section className="col-6">
             <Card>
               <Card.Body>
                 <Card.Title>Comentarios</Card.Title>
@@ -64,7 +59,7 @@ class Profile extends React.Component {
             </Card>
           </section>
 
-          <section className="col-6">            
+          <section className="col-6">
             <Card>
               <Card.Body>
                 <Card.Title>Noticias</Card.Title>

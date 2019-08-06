@@ -3,9 +3,10 @@ import React from "react";
 import MapComponent from "./MapComponent";
 import Filters from "./Filters";
 import NavBar from './Nav-bar';
+// import Profile from './Profile-school';
 import '../styles/Home.css';
 import { Card, Button } from 'react-bootstrap';
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 
 class Home extends React.Component {
@@ -97,20 +98,20 @@ class Home extends React.Component {
                     <h6 className="card-title" style={{'fontSize': '20px'}}>{place.name}</h6>
                     <p>{place.vicinity}</p>
                   </div>
-                  <Button variant="primary">Ver más</Button>
+                  <Link to='/profileschool'><Button variant="primary" >Ver más</Button></Link>
                   {place.photos && place.photos.length > 0 ? (
                     <img
                       className="card-img-top"
                       src={place.photos[0].getUrl()}
                       alt={place.name}
-                     
+
                     />
                   ) : (
                     <img
                       className="card-img-top"
                       src='http://louispasteur.edu.mx/images/2018/02/02/primaria.jpg'
                       alt={place.name}
-                    
+
 
                     />
                   )}
@@ -140,7 +141,7 @@ class Home extends React.Component{
     render(){
 
         return(
-        <div>   
+        <div>
             <NavBar/>
             <div id="main">
                 <Filters/>
