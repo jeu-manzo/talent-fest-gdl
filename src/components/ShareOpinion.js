@@ -1,5 +1,7 @@
 import React from 'react';
-import DynamicScore from './DynamicScore'
+import DynamicScore from './DinamicScore'
+import '../styles/shareOpinion.css'
+
 
 
 class ShareOpinion extends React.Component {
@@ -7,17 +9,19 @@ class ShareOpinion extends React.Component {
 
         return (
 
-            <div>
+            <div className="userOpinion">
                 <section>
-                    <p>Nombre</p>
-                    <p> Direccion y teléfono</p>
+                    <h4>Reseña de la escuela:</h4>
+                    <h2 className="schoolName">Nombre</h2>
+                    
+                    <p className="address"> Direccion y teléfono</p>
                 </section>
                 <section>
-                    Califica tu experiencia en general con la escuela <span>""</span>
+                    Califica tu experiencia en general con la escuela <span className="schoolName"></span>
                     <DynamicScore />
                     <textarea placeholder="Cuéntale a los demás tu experiencia ¿Qué es lo que más te ha gustado?, ¿Y qué te gustaría cambiar?"></textarea>
                 </section>
-                <h2>Califica lo siguiente </h2>
+                <h4>Califica lo siguiente </h4>
                 <section className="row" >
                     <section className="col-6">
                     Administracion

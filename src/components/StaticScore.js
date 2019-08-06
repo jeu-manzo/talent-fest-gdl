@@ -2,9 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import StarRatingComponent from 'react-star-rating-component';
  
-function StaticScore {
-  render() {
-
+function StaticScore (props){
+  
     return (                
       <div>
         <StarRatingComponent 
@@ -16,6 +15,6 @@ function StaticScore {
       </div>
     );
   }
-}
+
 
 export default StaticScore;

@@ -1,0 +1,22 @@
+.mapa-seccion{
+    width: 100%;
+    height: 300px;
+    border: 1px solid black;
+    
+    
+}
+
+.profile-school{
+    display: block;
+    text-align: center; 
+
+
+}
+.seccion-datos-principales{
+    margin-top: 3rem;
+}
+
+.profile-section{
+    margin-bottom: 3rem;
+  
+}
