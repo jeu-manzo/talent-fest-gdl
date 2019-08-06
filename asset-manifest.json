@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/talent-fest-gdl/static/css/main.943430c2.chunk.css",
+    "main.js": "/talent-fest-gdl/static/js/main.38a30b46.chunk.js",
+    "main.js.map": "/talent-fest-gdl/static/js/main.38a30b46.chunk.js.map",
+    "runtime~main.js": "/talent-fest-gdl/static/js/runtime~main.d19191fd.js",
+    "runtime~main.js.map": "/talent-fest-gdl/static/js/runtime~main.d19191fd.js.map",
+    "static/js/2.12da9320.chunk.js": "/talent-fest-gdl/static/js/2.12da9320.chunk.js",
+    "static/js/2.12da9320.chunk.js.map": "/talent-fest-gdl/static/js/2.12da9320.chunk.js.map",
+    "index.html": "/talent-fest-gdl/index.html",
+    "precache-manifest.7c1f76fa856ac5e3252f29949e4383a7.js": "/talent-fest-gdl/precache-manifest.7c1f76fa856ac5e3252f29949e4383a7.js",
+    "service-worker.js": "/talent-fest-gdl/service-worker.js",
+    "static/css/main.943430c2.chunk.css.map": "/talent-fest-gdl/static/css/main.943430c2.chunk.css.map"
+  }
+}
