@@ -6,6 +6,11 @@ import { Navbar, Nav } from "react-bootstrap";
 class NavBar extends React.Component{
 
     render(){
+
+
+class NavBar extends React.Component{
+
+    render(){
         
         return(               
             <>
@@ -16,6 +21,24 @@ class NavBar extends React.Component{
               </Nav>
             </Navbar>           
           </>
+        )
+    }
+}
+
+
+        return(
+            <div>
+              {/* <Nav.Item>
+                <Nav.Link>
+                  <Link to="/">Home</Link>
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link>
+                  <Link to="/login">Login</Link>
+                </Nav.Link>
+              </Nav.Item> */}
+              </div>
         )
     }
 }
