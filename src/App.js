@@ -37,12 +37,9 @@ class App extends React.Component {
             <Route path="/login" render={routeprops => {
              return <Login {...routeprops} updateCredentials={this.updateCredentials} />
            }} />
-           <PrivateRoute path="/rate" component={Rate} isAuth={this.state.isAuth} />
-
+           <PrivateRoute path="/shareopinion" component={Shareopinion} isAuth={this.state.isAuth} />
+           <PrivateRoute path="/profileschool" component={Profile} isAuth={this.state.isAuth} />
             <Route path="/signup" component={Signup} />
-            <Route path="/profileschool" component = {Profile}/>
-            <Route path="/shareopinion" component = {Shareopinion}/>
-           
           </Switch>
         </>
       </Router>

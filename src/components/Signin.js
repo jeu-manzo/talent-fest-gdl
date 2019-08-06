@@ -30,7 +30,8 @@ class Signin extends Component {
      console.log('token', token)
      // set credentals values
      this.props.updateCredentials(token, true)
-     this.props.history.push('/rate')
+     this.props.history.push('/shareopinion')
+     this.props.history.push('/profileschool')
    }
  })
  .catch((error) => {
